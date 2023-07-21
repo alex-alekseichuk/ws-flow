@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Client</title>
+</head>
+<body>
+WS Client.
+See Dev. Console.
+</body>
+<script>
+  const ws = new WebSocket('ws://172.29.142.147:8080');
+  ws.onopen = () => {
+    console.log('opened');
+    ws.send('Hello!');
+  };
+  ws.onmessage = event => {
+    console.log('Received:', event.data);
+  };
+  ws.onclose = () => {
+    console.log('closed');
+  };
+  ws.onerror = event => {
+    console.log('Error:', event);
+  };
+</script>
+</html>

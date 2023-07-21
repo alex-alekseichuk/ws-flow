@@ -1,0 +1,21 @@
+{
+  "name": "ws-flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ws-server.js",
+  "type": "module",
+  "scripts": {
+    "script": "node --es-module-specifier-resolution=node --experimental-modules",
+    "players": "npm run script -- players/players-service.js",
+    "games": "npm run script -- games/games-service.js",
+    "info": "npm run script -- info/info-service.js",
+    "ws-client": "npm run script -- misc/ws-client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}
